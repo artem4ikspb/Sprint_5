@@ -9,7 +9,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from utils.helpers import generate_random_email, generate_random_password
 
-class TestRegistration:
+class TestLoginAndRegistration:
     def find_header_field(self, driver):
         return WebDriverWait(driver, 3).until(
             EC.visibility_of_element_located(MPL.HEADER_FIELD),
@@ -165,4 +165,4 @@ class TestRegistration:
         assert self.is_not_avatar_present(driver), "Аватар отображается после logout"
 
         # там теперь отображается кнопка «Вход и регистрация».
-        assert self.is_login_and_reg_button_present(driver)
+        assert self.is_login_and_reg_button_present(driver), "Кнопка регистрации не видна"
