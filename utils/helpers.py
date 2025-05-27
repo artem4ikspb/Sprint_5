@@ -18,3 +18,8 @@ def generate_random_email():
 
 def generate_random_password():
     return "password"
+
+
+def get_random_unit(units):
+    size = len(units)
+    return random.choices(units)
