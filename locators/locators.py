@@ -16,7 +16,7 @@ class RegistrationFormLocators:
     SUBMIT_PASSWORD_REGISTRATION_INPUT = (By.NAME, "submitPassword")
     EMAIL_CREATE_ACCOUNT_BUTTON = (By.XPATH, ".//button[text()='Создать аккаунт']")
     PARENT_EMAIL_REGISTRATION_INPUT = (By.XPATH, "./parent::div[@name='email']")
-    PARENT_EMAIL_REGISTRATION_INPUT_ERROR = (By.CSS_SELECTOR, ".input_inputError__fLUP9")
+    PARENT_EMAIL_REGISTRATION_INPUT_ERROR = (By.CSS_SELECTOR, "div.input_inputError__fLUP9")
     WRONG_EMAIL_ERROR_SPAN = (By.XPATH, ".//span[text()='Ошибка']")
 
 class LoginModalFormLocators:
