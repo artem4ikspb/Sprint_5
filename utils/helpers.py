@@ -14,8 +14,3 @@ def generate_random_email():
     # Формирование полного email-адреса
     email = f"{local_part}@{domain}.{tld}"
     return email
-
-
-def get_random_unit(units):
-    size = len(units)
-    return random.choices(units)

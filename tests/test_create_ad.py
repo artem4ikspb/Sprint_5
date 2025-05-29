@@ -1,15 +1,11 @@
-import time
 from selenium.webdriver.chrome.webdriver import WebDriver
 from data.test_data import login_data_success, units
-from locators.locators import RegistrationFormLocators as RFL, \
-                            LoginModalFormLocators as LMF, \
+from locators.locators import LoginModalFormLocators as LMF, \
                             MainPageLocators as MPL, \
                             AdsPageLocators as APL, \
                             ProfilePageLocators as PPL
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from utils.helpers import get_random_unit
 
 
 URL = 'https://qa-desk.stand.praktikum-services.ru/'
@@ -26,7 +22,6 @@ class TestCreateAds:
             EC.element_to_be_clickable(APL.CREATE_AD_BUTTON),
             message=f"Can't find element by locator {APL.CREATE_AD_BUTTON}")
         button.click()
-        # driver.find_element(*APL.AD_CREATE_PAGE)
         modal_form = WebDriverWait(driver, 3).until(
             EC.presence_of_element_located(APL.NEED_AUTH_MODAL_FORM),
             message=f"Can't find element by locator {APL.NEED_AUTH_MODAL_FORM}")
